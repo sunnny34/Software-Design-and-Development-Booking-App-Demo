@@ -268,6 +268,7 @@ const createTables = () => {
 module.exports = db;
 ```
 
+
 ### 2.3 การสร้าง API Endpoints
 
 1. สร้างไฟล์ `server.js`:
@@ -500,7 +501,7 @@ app.listen(port, () => {
 }
 ```
 
-![ทดสอบ Login](images/postman-login.png)
+![ทดสอบ Login](images/postman-login.png)  ![alt text](<ผลการเพิ่มข้อมูลการจอง (POST) 1.png>) ![alt text](<ผลการเพิ่มข้อมูลการจอง (POST) 2.png>) ![alt text](<ผลการเพิ่มข้อมูลการจอง (POST) 3.png>)
 
 4. เพิ่ม variable ชื่อ token โดยคัดลอก token ที่ได้จากขั้นตอนการ Login
    ![เพิ่ม Token](images/postman-addtoken.png)
@@ -530,7 +531,7 @@ app.listen(port, () => {
 
 ### บันทึกผลลัพธ์การ Get ข้อมูล
 
-![รูปผลลัพธ์การ Get ข้อมูล](images path/image.png)
+![รูปผลลัพธ์การ Get ข้อมูล](images path/image.png)!![alt text](<ผลการ GET ข้อมูลโดยระบุ ID.png>)
 
 ### กรณีผลลัพธ์แจ้ง "error":"Token ไม่ถูกต้องหรือหมดอายุ" ให้ทำการ Login ใหม่ แล้วคัดลอก Token ที่ได้เพื่อเปลี่ยนค่าใน variable token
 
@@ -545,7 +546,7 @@ app.listen(port, () => {
 
 8. สร้าง request เพื่อ Update Booking ระบุ Url คือ PUT: {{baseUrl}}/api/bookings/1
    - Headers: Authorization: Bearer {{token}}
-   - เปลี่ยนแปลงแก้ไขข้อมูล fullname, email และคอลัมน์ comment กำหนดให้มีค่าเป็น "Updated by [ชื่อนักศึกษา]"
+   - เปลี่ยนแปลงแก้ไขข้อมูล fullname, email และคอลัมน์ comment กำหนดให้มีค่าเป็น "Updated by [ชื่อนักศึกษา]"  ![alt text]
 
 ### /1 คือหมายเลข ID ที่ต้องการแก้ไขข้อมูล
 
@@ -553,7 +554,7 @@ app.listen(port, () => {
 
 ### บันทึกผลลัพธ์การ PUT เพื่อแก้ไขข้อมูล (ข้อมูล comment จะต้องไม่เป็นค่า null)
 
-![รูปผลลัพธ์การ PUT ข้อมูล](images path/image.png)
+![รูปผลลัพธ์การ PUT ข้อมูล](images path/image.png) ![alt text](<สกรีนช็อต 2026-03-11 150559-1.png>)
 
 9. สร้าง request เพื่อ Delete Booking ระบุ Url คือ DELETE: {{baseUrl}}/api/bookings/1
    - Headers: Authorization: Bearer {{token}}
@@ -564,13 +565,13 @@ app.listen(port, () => {
 
 9.1 ปรับปรุงแก้ไขโค้ดเพื่อให้แสดงผลการลบเป็น status : "ลบข้อมูลสำเร็จโดย [ชื่อนักศึกษา]"
 ดังรูป
-![ผลการลบข้อมูล](images/postman-deleted-with-status.png)
+![ผลการลบข้อมูล](images/postman-deleted-with-status.png) ![alt text](<สกรีนช็อต 2026-03-11 151120.png>)
 
 ### บันทึกผลลัพธ์การ DELETE with status
 
 ![รูปผลลัพธ์การ Delete ข้อมูล](images path/image.png)
 
-
+![alt text](<สกรีนช็อต 2026-03-11 151120.png>)
 
 ## ทฤษฎีที่เกี่ยวข้องกับการพัฒนาส่วน Front-end ด้วย React
 ### 1. React
@@ -1153,7 +1154,7 @@ export default App;
 ```
 2) ทดสอบรัน โดยพิมพ์คำสั่ง npm run dev แล้วบันทึกหน้าผลการรัน
 #### บันทึกรูปผลการรัน
-![ผลการรัน](./image path/image.png)
+![ผลการรัน](./image path/image.png) ![alt text](image.png)
 
 3) กดปุ่ม Ctrl ค้างไว้ แล้วคลิกลิ้ง ที่ http://localhost:เลข Port ที่รัน เพื่อเปิดหน้าเว็บการทำงาน แล้วตรวจสอบ error โดยไม่ต้องหยุดการทำงานของ Application
 #### บันทึกผลการรัน
@@ -1439,11 +1440,10 @@ export default BookingForm;
 
 2) กดเลือกเมนู "จองห้องพัก" หรือปุ่ม "จองห้องพักเลย" หากหน้าเว็บไม่แสดงหน้าฟอร์มการจองห้องพัก ให้ลองทำการ refresh หน้าเว็บ เพื่อให้ระบบแสดงหน้าเว็บดังตัวอย่าง
 
-![หน้าจองห้องพัก](images/front-booking.png)
+![หน้าจองห้องพัก]!![alt text](image-1.png)
 3) ทดสอบป้อนข้อมูลการจอง โดยระบุชื่อผู้จองเป็นชื่อนักศึกษา และบันทึกผลการทดลองที่มีหน้าสรุปการจอง
 #### บันทึกผลการทดลอง
-![รูปหน้าจองห้องพัก ที่แสดงข้อมูลสรุปการจอง](images-path/image.png)
-
+![รูปหน้าจองห้องพัก ที่แสดงข้อมูลสรุปการจอง]![alt text](<สกรีนช็อต 2026-03-11 220303-1.png>)
 4) ใช้ Postman  ตรวจสอบว่ามีข้อมูลการจองเพิ่มไปหรือไม่ (หาก token หมดอายุ ต้องทำการ Login แล้วเปลี่ยนค่า token ใหม่)
 
 ### 3.2.3 AuthContext Component
@@ -1821,7 +1821,7 @@ export default App;
 4) ทำการ Login ด้วย user: admin  password: admin123  หากระบบทำงานถูกต้อง จะแสดงรายการจองห้องพัก
 
 ### บันทึกผลการทดลอง 
-![รูปรายการจองห้องพัก](images-path/image.png)
+![รูปรายการจองห้องพัก]![(images-path/image.png)](<สกรีนช็อต 2026-03-11 220303.png>)
    
    
 
@@ -1950,7 +1950,7 @@ export default BookingEdit;
 5) แก้ไขข้อมูลการจองและบันทึกรูปผลการทดลอง
    
 ### บันทึกผลการทดลอง
-![ผลการแก้ไขข้อมูลการจอง](./image-path/image.png)
+![ผลการแก้ไขข้อมูลการจอง]![alt text](<สกรีนช็อต 2026-03-11 221043.png>)
 
 ### 3.2.8 AdminDashboard Component
 
@@ -2012,6 +2012,15 @@ export default AdminDashboard;
 
 3) บันทึกผลการทดลอง เมื่อกดปุ่ม "สำหรับผู้ดูแลระบบ"
    ### บันทึกผลการทดลอง
-![ผลการแก้ไขข้อมูลการจอง](image-path/image.png)
+![ผลการแก้ไขข้อมูลการจอง]![alt text](<สกรีนช็อต 2026-03-11 221132.png>)
 
+คำถามที่ 1: axios คืออะไร และต่างจาก fetch ของ JavaScript อย่างไร?
+Axios ใช้งานง่ายและจัดการ request ได้สะดวกกว่า ส่วน Fetch เป็นฟังก์ชันพื้นฐานของ JavaScript ที่ไม่ต้องติดตั้งเพิ่ม
 
+คำถามที่ 2: เหตุใด ProtectedRoute จึงต้องตรวจสอบ loading state ก่อน ถ้าไม่ตรวจสอบจะเกิดอะไรขึ้น?
+ต้องตรวจสอบ loading state เพื่อให้ระบบตรวจสอบสถานะผู้ใช้ให้เสร็จก่อน แล้วค่อยตัดสินใจว่าจะให้เข้าเว็บหรือ redirect
+
+คำถามที่ 3: localStorage ที่ใช้เก็บ JWT token มีความเสี่ยงด้านความปลอดภัยอย่างไร และมีวิธีอื่นที่ดีกว่าหรือไม่?
+localStorage เสี่ยงต่อการโดนขโมย token จาก XSS
+
+วิธีที่ปลอดภัยกว่าคือใช้ HTTP-Only Cookies ในการเก็บ JWT token
